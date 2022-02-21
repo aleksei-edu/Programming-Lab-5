@@ -7,8 +7,9 @@ import utility.CommandManager;
 
 public class HelpCommand extends AbstractCommand{
     public HelpCommand(){
-        super("help", "вывести справку по доступным командам");
+        super("help","вывести справку по доступным командам");
     }
+
     @Override
     public void execute(String argument) {
         try {
