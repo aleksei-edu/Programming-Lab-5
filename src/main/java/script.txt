@@ -1,5 +1,2 @@
 show
-info
-update 1
-Hello
-123
+execute_script src/main/java/script_1.txt

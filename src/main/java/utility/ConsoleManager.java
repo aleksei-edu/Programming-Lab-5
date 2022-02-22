@@ -1,6 +1,4 @@
 package utility;
-import utility.CommandManager;
-import java.util.Locale;
 import java.util.Scanner;
 
 /**

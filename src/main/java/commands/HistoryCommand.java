@@ -12,7 +12,7 @@ public class HistoryCommand extends AbstractCommand{
     public HistoryCommand(){
         super("history","вывести последние 10 команд (без их аргументов)");
     }
-
+//TODO
     @Override
     public void execute(String argument) {
         try {
