@@ -6,6 +6,9 @@ import exception.CommandNotAcceptArgumentsException;
 import utility.CollectionManager;
 import utility.CommandManager;
 
+/**
+ * Команда удаляет элемент из коллекции по id
+ */
 public class RemoveByIdCommand extends AbstractCommand{
     public RemoveByIdCommand(){
         super("remove_by_id","удалить элемент из коллекции по его id");

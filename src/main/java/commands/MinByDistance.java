@@ -7,6 +7,9 @@ import utility.CollectionManager;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * Команда выводит минимальный по distance элемент Route
+ */
 public class MinByDistance extends AbstractCommand{
     public MinByDistance(){
         super("min_by_distance","вывести любой объект из коллекции," +

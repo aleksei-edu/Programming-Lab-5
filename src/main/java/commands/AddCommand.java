@@ -5,6 +5,9 @@ import exception.CommandNotAcceptArgumentsException;
 import utility.CollectionManager;
 import utility.CreateNewElementManager;
 
+/**
+ * Команда добавить новый элемент в коллекцию
+ */
 public class AddCommand extends AbstractCommand{
     public AddCommand(){
         super("add","добавить новый элемент в коллекцию");

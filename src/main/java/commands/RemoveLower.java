@@ -8,6 +8,9 @@ import utility.CreateNewElementManager;
 
 import java.util.ArrayList;
 
+/**
+ * Команда удаляет все элементы меньшие, чем переданный ей
+ */
 public class RemoveLower extends AbstractCommand{
     public RemoveLower(){
         super("remove_lower","удалить из коллекции все элементы, меньшие, чем заданный");

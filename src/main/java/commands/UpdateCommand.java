@@ -4,9 +4,11 @@ import data.Route;
 import exception.CommandNeedArgumentException;
 import exception.CommandNotAcceptArgumentsException;
 import utility.CollectionManager;
-import utility.ConsoleManager;
 import utility.CreateNewElementManager;
 
+/**
+ * Команда обновляет значение элемента коллекции
+ */
 public class UpdateCommand extends AbstractCommand{
     public UpdateCommand(){
         super("update","обновить значение элемента коллекции, id которого равен заданному" );

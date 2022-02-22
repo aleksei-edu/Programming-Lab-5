@@ -1,5 +1,8 @@
 package data;
 
+/**
+ * Объекты, которые используются в Route
+ */
 public class LocationFrom {
     private Integer x; //Поле не может быть null
     private float y;

@@ -7,6 +7,9 @@ import utility.CollectionManager;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
+/**
+ * Команда выводит основную информацию о коллекции
+ */
 public class InfoCommand extends AbstractCommand{
     public InfoCommand(){
         super("info","вывести в стандартный поток вывода информацию о коллекции" +

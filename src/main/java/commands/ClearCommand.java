@@ -4,6 +4,9 @@ import data.Route;
 import exception.CommandNotAcceptArgumentsException;
 import utility.CollectionManager;
 
+/**
+ * Команда очистить коллекцию
+ */
 public class ClearCommand extends AbstractCommand {
     public ClearCommand(){
         super("clear","очистить коллекцию");

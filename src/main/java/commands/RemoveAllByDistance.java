@@ -5,6 +5,9 @@ import exception.CommandNeedArgumentException;
 import exception.CommandNotAcceptArgumentsException;
 import utility.CollectionManager;
 
+/**
+ * Команда удаляет все элементы по значению поля distance
+ */
 public class RemoveAllByDistance extends AbstractCommand{
     public RemoveAllByDistance(){
         super("remove_all_by_distance","удалить из коллекции все элементы, " +

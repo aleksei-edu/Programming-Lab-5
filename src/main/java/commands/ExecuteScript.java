@@ -5,6 +5,9 @@ import exception.CommandNotAcceptArgumentsException;
 import utility.CollectionManager;
 import utility.FileManager;
 
+/**
+ * Команда считывающая и выполняющая скрипт из файла
+ */
 public class ExecuteScript extends AbstractCommand{
     public ExecuteScript(){
         super("execute_script","считать и исполнить скрипт из указанного файла. " +

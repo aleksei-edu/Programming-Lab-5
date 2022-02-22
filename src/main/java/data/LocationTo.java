@@ -1,5 +1,8 @@
 package data;
 
+/**
+ * Объекты, которые используются Route
+ */
 public class LocationTo {
     private Float x; //Поле не может быть null
     private Long y; //Поле не может быть null

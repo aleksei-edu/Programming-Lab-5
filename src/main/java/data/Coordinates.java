@@ -1,5 +1,8 @@
 package data;
 
+/**
+ * Объекты, которые используются в Route.
+ */
 public class Coordinates {
     private Double x; //Максимальное значение поля: 669, Поле не может быть null
     private double y;

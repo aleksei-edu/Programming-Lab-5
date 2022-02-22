@@ -1,10 +1,11 @@
 package commands;
 
-import data.Route;
 import exception.CommandNotAcceptArgumentsException;
-import utility.CollectionManager;
 import utility.CommandManager;
 
+/**
+ * Команда, выводящая справку по всем доступным командам
+ */
 public class HelpCommand extends AbstractCommand{
     public HelpCommand(){
         super("help","вывести справку по доступным командам");

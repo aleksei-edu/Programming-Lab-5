@@ -5,6 +5,9 @@ import exception.CommandNotAcceptArgumentsException;
 import utility.CollectionManager;
 import utility.CommandManager;
 
+/**
+ * Команда, показывающая 10 последних команд
+ */
 public class HistoryCommand extends AbstractCommand{
     public HistoryCommand(){
         super("history","вывести последние 10 команд (без их аргументов)");

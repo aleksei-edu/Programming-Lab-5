@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * Элементы коллекцией, которыми управляет программа
+ */
 public class Route implements Comparable<Route> {
     private int id; //Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private String name; //Поле не может быть null, Строка не может быть пустой
@@ -93,17 +96,27 @@ public class Route implements Comparable<Route> {
     public List<String> getRouteList(){
         return routeList;
     }
+    @Override
     public int compareTo(Route routeObj){
         Integer compareId = id;
         return compareId.compareTo(routeObj.getId());
     }
 
+    /**
+     * Класс для сравнения элементов Route по дистанции
+     * @see commands.MinByDistance
+     */
     public static class ComparatorByDistance implements Comparator<Route>{
         @Override
         public int compare(Route o1, Route o2) {
             return o1.getDistance().compareTo(o2.getDistance());
         }
     }
+
+    /**
+     * Класc для сравнения элементов Route по дате создания
+     * @see commands.MaxByCreationDate
+     */
     public static class ComparatorByCreationDate implements Comparator<Route>{
         @Override
         public int compare(Route o1, Route o2) {

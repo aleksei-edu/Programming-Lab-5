@@ -7,6 +7,9 @@ import utility.CollectionManager;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * Команда выводит максимальный по creationDate элемент Route
+ */
 public class MaxByCreationDate extends AbstractCommand{
     public MaxByCreationDate(){
         super("max_by_creation_date","вывести любой объект из коллекции," +

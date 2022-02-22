@@ -5,6 +5,9 @@ import exception.CommandNotAcceptArgumentsException;
 import utility.CollectionManager;
 import utility.FileManager;
 
+/**
+ * Команда сохраняет коллекцию в файл
+ */
 public class SaveCommand extends AbstractCommand{
     public SaveCommand(){
         super("save","сохранить коллекцию в файл");
