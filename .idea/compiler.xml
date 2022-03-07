@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="gradleLab5.main" target="16" />
+      <module name="gradleLab5.test" target="16" />
+      <module name="lab5.2.app" target="16" />
+      <module name="lab5.2.app.main" target="16" />
+      <module name="lab5.2.app.test" target="16" />
+    </bytecodeTargetLevel>
+  </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="lab5.1" options="--add-exports java.base/javax=ALL-UNNAMED" />
