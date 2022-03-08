@@ -6,7 +6,7 @@ import utility.CollectionManager;
 import utility.CreateNewElementManager;
 
 /**
- * Команда добавить новый элемент в коллекцию,если его значение превышает значение наибольшего элемента этой коллекции
+ * Команда добавить новый элемент в коллекцию, если его значение превышает значение наибольшего элемента этой коллекции
  */
 public class AddIfMax extends AbstractCommand{
     public AddIfMax(){

@@ -1,7 +1,7 @@
 package commands;
 
 import exception.CommandNotAcceptArgumentsException;
-import utility.CommandManager;
+import invokers.CommandManager;
 
 /**
  * Команда, показывающая 10 последних команд

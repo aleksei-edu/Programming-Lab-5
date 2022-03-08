@@ -6,7 +6,7 @@ package commands;
 
 import java.io.IOException;
 
-public interface CommandInterface {
+public interface Command {
     /**
      * Имя команды, по которому пользователь, вызывает её
      *
