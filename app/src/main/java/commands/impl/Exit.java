@@ -1,14 +1,15 @@
-package commands;
+package commands.impl;
 
+import annotation.ClassMeta;
+import commands.AbstractCommand;
 import exception.CommandNotAcceptArgumentsException;
 
 /**
  * Команда для выхода из консольного приложения
  */
-public class ExitCommand extends AbstractCommand{
-    public ExitCommand(){
-        super("exit","завершить программу (без сохранения в файл)");
-    }
+@ClassMeta(name = "exit", description = "завершить программу (без сохранения в файл)")
+public class Exit extends AbstractCommand {
+
     @Override
     public void execute(String argument){
         try {

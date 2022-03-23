@@ -1,20 +1,21 @@
-package commands;
+package commands.impl;
 
+import annotation.ClassMeta;
+import commands.AbstractCommand;
 import exception.CommandNotAcceptArgumentsException;
-import utility.CollectionManager;
+import utility.JavaCollectionManager;
 
 /**
  * Команда очистить коллекцию
  */
-public class ClearCommand extends AbstractCommand {
-    public ClearCommand(){
-        super("clear","очистить коллекцию");
-    }
+@ClassMeta(name = "clear", description = "очистить коллекцию")
+public class Clear extends AbstractCommand {
+
     @Override
     public void execute(String argument) {
         try {
             if(!argument.isEmpty()) throw new CommandNotAcceptArgumentsException();
-            CollectionManager.clear();
+            JavaCollectionManager.clear();
         }
         catch(CommandNotAcceptArgumentsException e){
             e.printStackTrace();

@@ -1,18 +1,18 @@
-package commands;
+package commands.impl;
 
+import annotation.ClassMeta;
+import commands.AbstractCommand;
 import data.Route;
 import exception.CommandNeedArgumentException;
 import exception.CommandNotAcceptArgumentsException;
-import utility.CollectionManager;
+import utility.JavaCollectionManager;
 import utility.CreateNewElementManager;
 
 /**
  * Команда обновляет значение элемента коллекции
  */
-public class UpdateCommand extends AbstractCommand{
-    public UpdateCommand(){
-        super("update","обновить значение элемента коллекции, id которого равен заданному" );
-    }
+@ClassMeta(name = "update", description = "обновить значение элемента коллекции, id которого равен заданному")
+public class Update extends AbstractCommand {
 
     @Override
     public void execute(String argument) {
@@ -21,7 +21,7 @@ public class UpdateCommand extends AbstractCommand{
                     "значение которого хотите обновить");
             try{
                 int id = Integer.parseInt(argument);
-                for(Route route : CollectionManager.getRouteCollection()){
+                for(Route route : JavaCollectionManager.getRouteCollection()){
                     if(route.getId() == id){
                         CreateNewElementManager.update(route);
                     }

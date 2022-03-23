@@ -1,27 +1,25 @@
-package commands;
+package commands.impl;
 
+import annotation.ClassMeta;
+import commands.AbstractCommand;
 import exception.CommandNotAcceptArgumentsException;
 import utility.FileManager;
-
+import java.io.IOException;
 
 /**
  * Команда сохраняет коллекцию в файл
  */
 
-import java.io.IOException;
-
-public class SaveCommand extends AbstractCommand{
-    public SaveCommand(){
-        super("save","сохранить коллекцию в файл");
-    }
+@ClassMeta(name = "save", description = "сохранить коллекцию в файл")
+public class Save extends AbstractCommand {
 
     @Override
-    public void execute(String argument) throws IOException {
+    public void execute(String argument) {
         try {
             if(!argument.isEmpty()) throw new CommandNotAcceptArgumentsException();
             FileManager.saveCollection();
         }
-        catch(CommandNotAcceptArgumentsException e){
+        catch(CommandNotAcceptArgumentsException | IOException e){
             e.printStackTrace();
         }
     }

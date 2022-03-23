@@ -1,8 +1,10 @@
-package commands;
+package commands.impl;
 
+import annotation.ClassMeta;
+import commands.AbstractCommand;
 import data.Route;
 import exception.CommandNotAcceptArgumentsException;
-import utility.CollectionManager;
+import utility.JavaCollectionManager;
 import utility.ConsoleManager;
 import utility.CreateNewElementManager;
 
@@ -11,10 +13,8 @@ import java.util.ArrayList;
 /**
  * Команда удаляет все элементы меньшие, чем переданный ей
  */
-public class RemoveLower extends AbstractCommand{
-    public RemoveLower(){
-        super("remove_lower","удалить из коллекции все элементы, меньшие, чем заданный");
-    }
+@ClassMeta(name = "remove_lower", description = "удалить из коллекции все элементы, меньшие, чем заданный")
+public class RemoveLower extends AbstractCommand {
 
     @Override
     public void execute(String argument) {
@@ -23,7 +23,7 @@ public class RemoveLower extends AbstractCommand{
             Route route = CreateNewElementManager.createNewElement();
             ArrayList<Route> removeArray = new ArrayList<>();
             boolean flag = false;
-            for (Route index : CollectionManager.getRouteCollection()){
+            for (Route index : JavaCollectionManager.getRouteCollection()){
                 if(index.compareTo(route) < 1){
                     removeArray.add(index);
                     flag = true;
@@ -40,7 +40,7 @@ public class RemoveLower extends AbstractCommand{
                         var userPrint = ConsoleManager.getUserPrint();
                         if (userPrint.equals("y")) {
                             for(Route index : removeArray){
-                                CollectionManager.getRouteCollection()
+                                JavaCollectionManager.getRouteCollection()
                                         .removeIf(route2Delete -> (route2Delete.getId()== index.getId()));
                             }
                             System.out.println("Элементы успешно удалены");

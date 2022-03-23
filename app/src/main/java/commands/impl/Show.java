@@ -1,26 +1,25 @@
-package commands;
+package commands.impl;
 
+import annotation.ClassMeta;
+import commands.AbstractCommand;
 import data.Route;
 import exception.CommandNotAcceptArgumentsException;
-import utility.CollectionManager;
+import utility.JavaCollectionManager;
 
 /**
  * Команда выводит в консоль все элементы коллекции
  */
-public class ShowCommand extends AbstractCommand{
-    public ShowCommand(){
-        super("show","вывести в стандартный поток вывода все " +
-                "элементы коллекции в строковом представлении");
-    }
+@ClassMeta(name = "show", description = "вывести в стандартный поток вывода все элементы коллекции в строковом представлении")
+public class Show extends AbstractCommand {
 
     @Override
     public void execute(String argument) {
         try {
             if(!argument.isEmpty()) throw new CommandNotAcceptArgumentsException();
-                if (CollectionManager.getRouteCollection().size() == 0){
+                if (JavaCollectionManager.getRouteCollection().size() == 0){
                     System.out.println("Коллекция пуста.");
                 }
-                else for (Route index : CollectionManager.getRouteCollection()){
+                else for (Route index : JavaCollectionManager.getRouteCollection()){
                     System.out.println(index.toString());
                 }
         }

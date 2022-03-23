@@ -1,14 +1,16 @@
-package commands;
+package commands.impl;
 
+import annotation.ClassMeta;
+import commands.AbstractCommand;
 import exception.CommandNotAcceptArgumentsException;
-import invokers.CommandManager;
+import utility.CommandManager;
 
 /**
  * Команда, показывающая 10 последних команд
  */
-public class HistoryCommand extends AbstractCommand{
-    public HistoryCommand(){
-        super("history","вывести последние 10 команд (без их аргументов)");
+@ClassMeta(name = "history", description = "вывести последние 10 команд (без их аргументов)")
+public class History extends AbstractCommand {
+    public History(){
     }
 //TODO
     @Override
