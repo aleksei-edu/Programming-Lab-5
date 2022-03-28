@@ -4,8 +4,6 @@ package commands;
  * Интерфейс, который описывает основные методы всех команд
  */
 
-import java.io.IOException;
-
 public interface Command {
     /**
      * Запускает выполнение команды
