@@ -157,7 +157,6 @@ Thumbs.db
 # Ignore Gradle project-specific cache directory
 .gradle
 app/build
-app/build.gradle
 bin
 app/bin
 # Ignore Gradle build output directory
