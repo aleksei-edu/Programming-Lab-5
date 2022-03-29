@@ -144,6 +144,7 @@ main.synctex.gz
 main.toc
 #Idea
 .idea
+out
 # OS generated files #
 ######################
 .DS_Store
@@ -155,7 +156,8 @@ ehthumbs.db
 Thumbs.db
 # Ignore Gradle project-specific cache directory
 .gradle
-
+bin
 # Ignore Gradle build output directory
 build
-
+#Javadocs
+Javadocs
